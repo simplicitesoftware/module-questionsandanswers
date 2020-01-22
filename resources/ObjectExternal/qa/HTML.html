@@ -1,0 +1,70 @@
+<div id="qa">
+	<div class="cover">
+		<div class="cover-image" v-bind:style="{ backgroundImage: 'url(' + bannerURL + ')' }"></div>
+		<div class="row">
+			<div class="col-md-12 text-center head-title">
+				<h1>Questions & answers</h1>
+				<div class="baseline"><h2>This is a sample frontend for questiosn and answers</h2></div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<nav>
+			<ol class="breadcrumb" id="qa-breadcrumb"></ol>
+		</nav>
+		<div id="sections" class="row" v-if="sections">
+			<template v-for="item in sections">
+				<div class="col-md-4">
+					<div class="item clickable" v-on:click="selectChapter(item)">
+						<h1 class="text-primary text-center" v-html="item.qaSecNumber + ' - ' + item.qaSecTitle"></h1>
+						<p class="text-center text-muted" v-html="item.qaSecDescription"></p>
+					</div>
+				</div>
+			</template>
+		</div>
+		<div id="subsections" class="row" v-if="subsections">
+			<template v-for="item in subsections">
+				<div class="col-md-4">
+					<div class="item clickable" v-on:click="selectSubChapter(item)">
+						<h2 class="text-center text-primary" v-html="item.qaSecNumber + ' - ' + item.qaSecTitle"></h2>
+						<p class="text-center text-muted" v-html="item.qaSecDescription"></p>
+					</div>
+				</div>
+			</template>
+		</div>
+		<div id="questions" class="row" v-if="questions">
+			<template v-for="item in questions">
+				<div class="col-md-4">
+					<div class="item clickable" v-on:click="selectQuestion(item)">
+						<h3 class="text-center text-primary">Question</h3>
+						<p class="text-center text-muted" v-html="item.qaQaaQuestion"></p>
+					</div>
+				</div>
+			</template>
+		</div>
+		<div id="question" class="row item" v-if="question">
+			<template>
+				<div class="col-md-4">
+					<h3 class="text-left text-primary">Question</h3>
+					<p class="text-left" v-html="question.qaQaaQuestion"></p>
+				</div>
+				<div class="col-md-8 text-left text-muted">
+					<h3 class="text-left text-primary">Answer</h3>
+					<p class="text-left text-small text-warning" v-html="question.qaQaaDate"></p>
+					<p class="text-left" v-html="question.qaQaaAnswer"></p>
+					<h4 v-if="question.qaQaaDocumentURL">
+						<a v-bind:href="question.qaQaaDocumentURL" target="_blank">Download document</a>
+					</h4>
+					<h4 v-if="question.qaQaaURL">
+						<a v-bind:href="question.qaQaaURL" target="_blank">Read more...</a>
+					</h4>
+				</div>
+			</template>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr><p class="text-center">&copy; Simplcit&eacute; Software</p>
+		</div>
+	</div>
+</div>

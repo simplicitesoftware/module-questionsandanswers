@@ -1,0 +1,10 @@
+{
+    "date": "Wed Jan 22 16:49:20 CET 2020",
+    "name": "QuestionsAndAnswers",
+    "format": "xml",
+    "description": "### Introduction\n\nThis is a sample **Q&A** application (backend and frontend).\n\n### Import\n\nTo import this module:\n\n- Create a module named `QuestionsAndAnswers`\n- Set the settings as:\n\n```json\n{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-qa.git\"\n\t}\n}\n```\n\n- Click on the _Import module_ button\n\n### Configure\n\nIn order to have the frontend working the password for the\nwebservices-only user `qa` must be `simplicite`.\n\nThis can be acheived by importing the following XML:\n\n```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<simplicite xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.simplicite.fr/base\" xsi:schemaLocation=\"http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd\">\n<object>\n\t<name>UserPwd<\/name>\n\t<action>update<\/action>\n\t<data>\n\t\t<usr_login_read>qa<\/usr_login_read>\n\t\t<usr_password>simplicite<\/usr_password>\n\t<\/data>\n<\/object>\n<\/simplicite>\n```\n\n### Load data\n\nSample data is provided as a module's dataset.\n\nOpen this dataset and click on the _Apply_ button after having imported the module and made a full clear cache.",
+    "files": ["QuestionsAndAnswers.xml"],
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-qa.git"}},
+    "version": "4.0",
+    "dependencies": [{"Simplicite": "4.0"}]
+}

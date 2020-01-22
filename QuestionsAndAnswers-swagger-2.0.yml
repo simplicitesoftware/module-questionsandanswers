@@ -1,0 +1,1016 @@
+#  ___ _            _ _    _ _    __
+# / __(_)_ __  _ __| (_)__(_) |_ /_/
+# \__ \ | '  \| '_ \ | / _| |  _/ -_)
+# |___/_|_|_|_| .__/_|_\__|_|\__\___|
+#             |_| Module: QuestionsAndAnswers 4.0
+paths:
+  /rest/QAQuestionAndAnswerHistoric:
+    get:
+      summary: Search QAQuestionAndAnswerHistoric business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswerhistoric-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfQAQuestionAndAnswerHistoric'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: row_ref_id
+        description: Search filter for Reference
+        type: string
+        required: false
+      - in: query
+        name: row_idx
+        description: Search filter for Version
+        type: integer
+        required: false
+      - in: query
+        name: created_by_hist
+        description: Search filter for User
+        type: string
+        required: false
+      - in: query
+        name: created_dt_hist
+        description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: qaQaaQuestion
+        description: Search filter for Question
+        type: string
+        required: false
+      - in: query
+        name: qaQaaAnswer
+        description: Search filter for Answer
+        type: string
+        required: false
+      tags:
+      - QAQuestionAndAnswerHistoric
+  /login:
+    get:
+      summary: Login (obtain bearer token)
+      security:
+      - basicAuth: []
+      produces:
+      - text/plain
+      - application/json
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      parameters:
+      - in: query
+        name: _output
+        description: Optional output format
+        type: string
+        required: false
+        enum:
+        - json
+        - oauth2
+        - token
+      tags:
+      - session
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      tags:
+      - session
+  /rest/QAQuestionAndAnswerHistoric/{row_id}:
+    post:
+      summary: Create a new QAQuestionAndAnswerHistoricbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswerhistoric-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+        in: body
+        name: body
+      tags:
+      - QAQuestionAndAnswerHistoric
+      consumes:
+      - application/json
+    get:
+      summary: Get a QAQuestionAndAnswerHistoric business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswerhistoric-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - QAQuestionAndAnswerHistoric
+    delete:
+      summary: Delete a QAQuestionAndAnswerHistoric business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswerhistoric-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - QAQuestionAndAnswerHistoric
+    put:
+      summary: Update a QAQuestionAndAnswerHistoricbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswerhistoric-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+        in: body
+        name: body
+      tags:
+      - QAQuestionAndAnswerHistoric
+      consumes:
+      - application/json
+  /rest/QASection/{row_id}:
+    post:
+      summary: Create a new QASectionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qasection-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QASection'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QASection'
+        in: body
+        name: body
+      tags:
+      - QASection
+      consumes:
+      - application/json
+    get:
+      summary: Get a QASection business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qasection-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QASection'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - QASection
+    delete:
+      summary: Delete a QASection business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qasection-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - QASection
+    put:
+      summary: Update a QASectionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qasection-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QASection'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QASection'
+        in: body
+        name: body
+      tags:
+      - QASection
+      consumes:
+      - application/json
+  /rest/QAQuestionAndAnswer/{row_id}:
+    post:
+      summary: Create a new QAQuestionAndAnswerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswer'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QAQuestionAndAnswer'
+        in: body
+        name: body
+      tags:
+      - QAQuestionAndAnswer
+      consumes:
+      - application/json
+    get:
+      summary: Get a QAQuestionAndAnswer business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswer'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - QAQuestionAndAnswer
+    delete:
+      summary: Delete a QAQuestionAndAnswer business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - QAQuestionAndAnswer
+    put:
+      summary: Update a QAQuestionAndAnswerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/QAQuestionAndAnswer'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/QAQuestionAndAnswer'
+        in: body
+        name: body
+      tags:
+      - QAQuestionAndAnswer
+      consumes:
+      - application/json
+  /rest/QASection:
+    get:
+      summary: Search QASection business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qasection-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfQASection'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: qaSecNumber
+        description: Search filter for Section number
+        type: string
+        required: false
+      - in: query
+        name: qaSecParent
+        description: Search filter for Parent section
+        type: string
+        required: false
+      - in: query
+        name: qaSecParent__qaSecNumber
+        description: Search filter for Section number
+        type: string
+        required: false
+      - in: query
+        name: qaSecTitle
+        description: Search filter for Section title
+        type: string
+        required: false
+      - in: query
+        name: qaSecDescription
+        description: Search filter for Description
+        type: string
+        required: false
+      tags:
+      - QASection
+  /rest/QAQuestionAndAnswer/{row_id}/publication:QAQuestionAndAnswer-XML:
+    get:
+      summary: Call a custom publication for a QAQuestionAndAnswer business object
+        record or for all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-publication-qaquestionandanswer-xml
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/PublicationResult'
+          description: Success in calling the custom publication
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - QAQuestionAndAnswer
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      parameters:
+      - in: query
+        name: texts
+        description: Texts?
+        type: boolean
+        required: false
+      tags:
+      - session
+  /rest/QAQuestionAndAnswer:
+    get:
+      summary: Search QAQuestionAndAnswer business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-qaquestionandanswer-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfQAQuestionAndAnswer'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
+        name: qaQaaSection
+        description: Search filter for Section
+        type: string
+        required: false
+      - in: query
+        name: qaQaaSection__qaSecNumber
+        description: Search filter for Section number
+        type: string
+        required: false
+      - in: query
+        name: qaQaaKeywords
+        description: Search filter for Keywords
+        type: string
+        required: false
+        enum:
+        - KEYWORD1
+        - KEYWORD2
+        - KEYWORD3
+      - in: query
+        name: qaQaaDate
+        description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: qaQaaQuestion
+        description: Search filter for Question
+        type: string
+        required: false
+      - in: query
+        name: qaQaaAnswer
+        description: Search filter for Answer
+        type: string
+        required: false
+      - in: query
+        name: qaQaaDocument
+        description: Search filter for Document
+        type: string
+        required: false
+      - in: query
+        name: qaQaaURL
+        description: Search filter for URL
+        type: string
+        required: false
+      tags:
+      - QAQuestionAndAnswer
+securityDefinitions:
+  basicAuth:
+    type: basic
+  bearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+definitions:
+  Error404:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 404
+  QAQuestionAndAnswerHistoric:
+    type: object
+    properties:
+      row_idx:
+        description: Version
+        type: integer
+      qaQaaAnswer:
+        description: Answer
+        type: string
+      qaQaaQuestion:
+        description: Question
+        type: string
+      created_dt_hist:
+        description: Date
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      created_by_hist:
+        description: User
+        type: string
+      row_ref_id:
+        description: Reference
+        type: string
+  PublicationResult:
+    type: object
+    properties:
+      mime:
+        description: MIME type
+        type: string
+      content:
+        description: Content (plain text or base64 encoded)
+        type: string
+  QASection:
+    type: object
+    properties:
+      qaSecTitle:
+        description: Section title
+        type: string
+      qaSecDescription:
+        description: Description
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      qaSecParent:
+        description: Parent section
+        type: string
+      qaSecParent__qaSecNumber:
+        description: Section number
+        type: string
+      qaSecNumber:
+        description: Section number
+        type: string
+  ArrayOfQAQuestionAndAnswerHistoric:
+    type: array
+    items:
+      $ref: '#/definitions/QAQuestionAndAnswerHistoric'
+  ActionResult:
+    type: object
+    properties:
+      result:
+        description: Action result
+        type: string
+  ArrayOfQASection:
+    type: array
+    items:
+      $ref: '#/definitions/QASection'
+  TreeviewData:
+    type: object
+    properties:
+      item:
+        description: Object item with lists of linked objects' items
+        type: object
+  ArrayOfQAQuestionAndAnswer:
+    type: array
+    items:
+      $ref: '#/definitions/QAQuestionAndAnswer'
+  Error400:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 400
+  QAQuestionAndAnswer:
+    type: object
+    properties:
+      qaQaaURL:
+        description: URL
+        type: string
+      qaQaaSection:
+        description: Section
+        type: string
+      qaQaaDate:
+        description: Date
+        type: string
+      qaQaaAnswer:
+        description: Answer
+        type: string
+      qaQaaSection__qaSecNumber:
+        description: Section number
+        type: string
+      qaQaaKeywords:
+        description: Keywords
+        type: array
+        items:
+          type: string
+          enum:
+          - KEYWORD1
+          - KEYWORD2
+          - KEYWORD3
+      qaQaaQuestion:
+        description: Question
+        type: string
+      qaQaaDocument:
+        description: Document
+        type: object
+      row_id:
+        description: Unique technical row ID
+        type: string
+  Error401:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 401
+  Error500:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 500
+  Error403:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 403
+swagger: '2.0'
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: API for module QuestionsAndAnswers
+  title: QuestionsAndAnswers
+  version: '4.0'
+tags:
+- name: QAQuestionAndAnswer
+  description: Question and answer
+- name: QAQuestionAndAnswerHistoric
+  description: Historic
+- name: QASection
+  description: Section

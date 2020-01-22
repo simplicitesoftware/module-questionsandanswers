@@ -885,7 +885,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
+		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Question and answer]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
@@ -905,7 +905,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_updall>1</obo_updall>
 		<obo_delall>1</obo_delall>
 		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_list_edit>U</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
 		<obo_icon>fas/question-circle</obo_icon>
@@ -1005,7 +1005,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
+		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Section]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
@@ -1025,7 +1025,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_updall>1</obo_updall>
 		<obo_delall>1</obo_delall>
 		<obo_listsearch>1</obo_listsearch>
-		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_list_edit>U</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
 		<obo_icon>fas/book</obo_icon>
@@ -2370,7 +2370,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>qaSecParent</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Parent chapter</tsl_value>
+		<tsl_value>Parent section</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -2502,7 +2502,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>qaSecParent</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Parent chapter</tsl_value>
+		<tsl_value>Section parente</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>

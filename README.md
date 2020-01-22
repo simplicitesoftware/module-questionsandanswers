@@ -131,6 +131,6 @@ No custom action
 `qa` external object definition
 -------------------------------
 
-Questions and answers browsers
+Questions and answers frontend
 
 

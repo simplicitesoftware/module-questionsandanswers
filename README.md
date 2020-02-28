@@ -85,10 +85,6 @@ Question and answer
     - `KEYWORD2` Keyword 2
     - `KEYWORD3` Keyword 3
 
-### Custom actions
-
-No custom action
-
 `QAQuestionAndAnswerHistoric` business object definition
 --------------------------------------------------------
 
@@ -105,10 +101,6 @@ No custom action
 | `qaQaaQuestion`                                              | html(1000000)                            | yes*     |           |          | Question                                                                         |
 | `qaQaaAnswer`                                                | html(1000000)                            | yes      | yes       |          | Answer                                                                           |
 
-### Custom actions
-
-No custom action
-
 `QASection` business object definition
 --------------------------------------
 
@@ -123,10 +115,6 @@ Section
 | _Ref. `qaSecParent.qaSecNumber`_                             | _char(20)_                               |          |           |          | _Section number_                                                                 |
 | `qaSecTitle`                                                 | char(100)                                | yes      | yes       |          | Section title                                                                    |
 | `qaSecDescription`                                           | html(1000000)                            |          | yes       |          | Description                                                                      |
-
-### Custom actions
-
-No custom action
 
 `qa` external object definition
 -------------------------------

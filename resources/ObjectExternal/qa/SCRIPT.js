@@ -47,7 +47,7 @@ var qa = typeof qa !== 'undefined' ? qa : (function($) {
 			sec = sec || app.getBusinessObject('QASection', 'qa_QASection');
 			qaa = qaa || app.getBusinessObject('QAQuestionAndAnswer', 'qa_QAQuestionAndAnswer');
 
-			var v = new Vue({
+			new Vue({
 				el: '#qa',
 				data: data,
 				beforeMount: function() { resetData(false); },
@@ -78,7 +78,7 @@ var qa = typeof qa !== 'undefined' ? qa : (function($) {
 							item.qaQaaDocumentURL = app.documentURL(qaa.getName(), "qaQaaDocument", item.row_id, item.qaQaaDocument, "attachment")
 						data.question = item;
 					}
-				},
+				}
 			});
 		} catch(e) {
 			console.error('Render error: ' + e.message);

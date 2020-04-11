@@ -31,6 +31,7 @@ components:
         created_dt_hist:
           description: Date
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         row_id:
           description: Unique technical row ID
           type: string
@@ -117,6 +118,7 @@ components:
         qaQaaDate:
           description: Date
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         qaQaaAnswer:
           description: Answer
           type: string

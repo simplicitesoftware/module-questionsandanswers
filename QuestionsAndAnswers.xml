@@ -2149,7 +2149,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_cached>0</res_cached>
 		<res_file/>
 		<res_file_compiled/>
-		<res_image>resources/Disposition/default/qa-module.png</res_image>
+		<res_image>resources/Disposition/default/qa-module.svg</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2163,11 +2163,11 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		</res_object>
 		<res_type>IMG</res_type>
 		<res_lang>ANY</res_lang>
-		<res_code>qa-module-full</res_code>
+		<res_code>qa-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
 		<res_file_compiled/>
-		<res_image>resources/Disposition/default/qa-module-full.png</res_image>
+		<res_image>resources/Disposition/default/qa-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
 	<data>

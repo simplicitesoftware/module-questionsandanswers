@@ -11,6 +11,8 @@
 `QuestionsAndAnswers` module definition
 =======================================
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-QuestionsAndAnswers&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-QuestionsAndAnswers)
+
 ### Introduction
 
 This is a sample **Q&A** application (backend and frontend).

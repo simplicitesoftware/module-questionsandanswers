@@ -97,6 +97,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<thm_menu_sact_t/>
 		<thm_menu_sta_c/>
 		<thm_menu_sta_t/>
+		<thm_compact/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
 </object>
@@ -130,17 +131,17 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<name>User</name>
 	<action>upsert</action>
 	<data>
-		<usr_login>qa</usr_login>
-		<usr_lang>FRA</usr_lang>
 		<usr_image_id>files/User/qa.png</usr_image_id>
+		<usr_login>qa</usr_login>
 		<usr_timezone/>
 		<usr_minrows>20</usr_minrows>
 		<usr_maxrows>50</usr_maxrows>
-		<usr_active>3</usr_active>
 		<usr_title/>
-		<usr_last_name/>
 		<usr_first_name/>
+		<usr_last_name/>
+		<usr_lang>FRA</usr_lang>
 		<usr_email/>
+		<usr_active>3</usr_active>
 		<usr_home_id.viw_name/>
 		<usr_work_num/>
 		<usr_home_num/>
@@ -153,11 +154,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<usr_country/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 		<usr_menu>1</usr_menu>
-		<usr_menu_defhidden>0</usr_menu_defhidden>
 		<usr_menu_defcollapsed>0</usr_menu_defcollapsed>
 		<usr_menu_defdomain_id.obd_name/>
-		<usr_extra>1</usr_extra>
-		<usr_subhead>1</usr_subhead>
 		<usr_logout>2020-01-22 16:54:38</usr_logout>
 		<usr_last_logon>2020-04-11 22:11:16</usr_last_logon>
 		<usr_dateformat/>
@@ -374,7 +372,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>1000000</fld_size>
@@ -411,7 +408,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>19</fld_size>
@@ -448,7 +444,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>17</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -485,7 +480,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>14</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>DMQA_QAA_KEYWORDS</fld_enumlist>
 		<fld_list_id.lov_name>QA_QAA_KEYWORDS</fld_list_id.lov_name>
 		<fld_copy>1</fld_copy>
 		<fld_size>1000</fld_size>
@@ -522,7 +516,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>1000000</fld_size>
@@ -559,7 +552,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -596,7 +588,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>10</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>255</fld_size>
@@ -633,7 +624,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>1000000</fld_size>
@@ -670,7 +660,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>20</fld_size>
@@ -707,7 +696,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -744,7 +732,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>100</fld_size>

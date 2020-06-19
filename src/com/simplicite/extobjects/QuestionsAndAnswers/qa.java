@@ -23,7 +23,7 @@ public class qa extends ExternalObject {
 			setDecoration(!pub);
 			String render = getName() + ".render(" + params.toJSON() + ", '" + HTMLTool.getResourceImageURL(this, "BANNER") + "', " + pub + ");";
 			if (pub) { // Public page version (standalone Bootstrap page)
-				BootstrapWebPage wp = new BootstrapWebPage(params.getRoot(), getDisplay(), false);
+				BootstrapWebPage wp = new BootstrapWebPage(params.getRoot(), getDisplay());
 				wp.setFavicon(HTMLTool.getResourceIconURL(this, "FAVICON"));
 				wp.appendAjax(true);
 				wp.appendVue();

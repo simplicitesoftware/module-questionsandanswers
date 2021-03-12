@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>QuestionsAndAnswers</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix>qa</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -113,6 +113,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<viw_scope/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 		<viw_theme_id.thm_name>questionsandanswers</viw_theme_id.thm_name>
+		<viw_lang/>
 	</data>
 </object>
 <object>
@@ -141,11 +142,11 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<usr_last_name/>
 		<usr_lang>FRA</usr_lang>
 		<usr_email/>
-		<usr_active>3</usr_active>
-		<usr_home_id.viw_name/>
 		<usr_work_num/>
 		<usr_home_num/>
 		<usr_cell_num/>
+		<usr_active>3</usr_active>
+		<usr_home_id.viw_name/>
 		<usr_address1/>
 		<usr_address2/>
 		<usr_zipcode/>
@@ -159,6 +160,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<usr_logout>2020-01-22 16:54:38</usr_logout>
 		<usr_last_logon>2020-04-11 22:11:16</usr_last_logon>
 		<usr_dateformat/>
+		<usr_lang_pref>FRA</usr_lang_pref>
 		<usr_uuid/>
 	</data>
 </object>
@@ -369,7 +371,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -386,6 +388,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Answer]]></fld_comment>
@@ -405,7 +408,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>1</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -422,6 +425,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc><![CDATA[[DATETIME]]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Date]]></fld_comment>
@@ -441,7 +445,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>17</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -458,6 +462,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Document]]></fld_comment>
@@ -477,7 +482,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>14</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name>QA_QAA_KEYWORDS</fld_list_id.lov_name>
@@ -494,6 +499,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>PB</fld_rendering>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Keywords]]></fld_comment>
@@ -513,7 +519,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -530,6 +536,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Question]]></fld_comment>
@@ -549,7 +556,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -566,6 +573,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Section]]></fld_comment>
@@ -585,7 +593,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>10</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -602,6 +610,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[URL]]></fld_comment>
@@ -621,7 +630,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -638,6 +647,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Description]]></fld_comment>
@@ -657,7 +667,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -674,6 +684,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Section number]]></fld_comment>
@@ -693,7 +704,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -710,6 +721,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Parent section]]></fld_comment>
@@ -729,7 +741,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -746,6 +758,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Section title]]></fld_comment>
@@ -922,6 +935,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -951,7 +966,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>0</obo_srh_predef>
+		<obo_srh_predef/>
 		<obo_selrow>1</obo_selrow>
 		<obo_updall>0</obo_updall>
 		<obo_delall>1</obo_delall>
@@ -984,6 +999,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1046,6 +1063,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -2656,6 +2675,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_id.shc_name>qa</tsl_id.shc_name>
 		<tsl_lang>ANY</tsl_lang>
 		<tsl_value>Q&amp;A frontend</tsl_value>
+		<tsl_tooltip/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
 </object>

@@ -1,4 +1,4 @@
-var qa = typeof qa !== 'undefined' ? qa : (function($) {
+var qa = qa || (function($) {
 	var app, sec, qaa, data = { sections: null, subsections: null, questions: null, question: null };
 
 	function breadcrumb(label) {

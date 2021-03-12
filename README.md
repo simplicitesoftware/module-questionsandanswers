@@ -62,6 +62,37 @@ Sample data is provided as a module's dataset.
 
 Open this dataset and click on the _Apply_ button after having imported the module and made a full clear cache.
 
+`QAQuestionAndAnswerHistoric` business object definition
+--------------------------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `row_ref_id` link to **`QAQuestionAndAnswer`**               | id                                       | yes*     |           |          | Record row ID                                                                    |
+| `row_idx`                                                    | int(11)                                  | yes*     | yes       |          | History record index                                                             |
+| `created_by_hist`                                            | char(100)                                | yes*     |           |          | Created by                                                                       |
+| `created_dt_hist`                                            | datetime                                 | yes*     |           |          | Created date                                                                     |
+| `qaQaaQuestion`                                              | html(1000000)                            | yes*     |           |          | Question                                                                         |
+| `qaQaaAnswer`                                                | html(1000000)                            | yes      | yes       |          | Answer                                                                           |
+
+`QASection` business object definition
+--------------------------------------
+
+Section
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `qaSecNumber`                                                | char(20)                                 | yes*     | yes       |          | Section number                                                                   |
+| `qaSecParent` link to **`QASection`**                        | id                                       |          | yes       |          | Parent section                                                                   |
+| _Ref. `qaSecParent.qaSecNumber`_                             | _char(20)_                               |          |           |          | _Section number_                                                                 |
+| `qaSecTitle`                                                 | char(100)                                | yes      | yes       |          | Section title                                                                    |
+| `qaSecDescription`                                           | html(1000000)                            |          | yes       |          | Description                                                                      |
+
 `QAQuestionAndAnswer` business object definition
 ------------------------------------------------
 
@@ -69,8 +100,8 @@ Question and answer
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `qaQaaSection` link to **`QASection`**                       | id                                       | yes*     |           |          | Section                                                                          |
 | _Ref. `qaQaaSection.qaSecNumber`_                            | _char(20)_                               |          |           |          | _Section number_                                                                 |
 | `qaQaaKeywords`                                              | multi(1000) using `QA_QAA_KEYWORDS` list |          |           |          | Keywords                                                                         |
@@ -86,37 +117,6 @@ Question and answer
     - `KEYWORD1` Keyword 1
     - `KEYWORD2` Keyword 2
     - `KEYWORD3` Keyword 3
-
-`QAQuestionAndAnswerHistoric` business object definition
---------------------------------------------------------
-
-
-
-### Fields
-
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `row_ref_id` link to **`QAQuestionAndAnswer`**               | id                                       | yes*     |           |          | -                                                                                |
-| `row_idx`                                                    | int(11)                                  | yes*     | yes       |          | -                                                                                |
-| `created_by_hist`                                            | char(100)                                | yes*     |           |          | -                                                                                |
-| `created_dt_hist`                                            | datetime                                 | yes*     |           |          | -                                                                                |
-| `qaQaaQuestion`                                              | html(1000000)                            | yes*     |           |          | Question                                                                         |
-| `qaQaaAnswer`                                                | html(1000000)                            | yes      | yes       |          | Answer                                                                           |
-
-`QASection` business object definition
---------------------------------------
-
-Section
-
-### Fields
-
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `qaSecNumber`                                                | char(20)                                 | yes*     | yes       |          | Section number                                                                   |
-| `qaSecParent` link to **`QASection`**                        | id                                       |          | yes       |          | Parent section                                                                   |
-| _Ref. `qaSecParent.qaSecNumber`_                             | _char(20)_                               |          |           |          | _Section number_                                                                 |
-| `qaSecTitle`                                                 | char(100)                                | yes      | yes       |          | Section title                                                                    |
-| `qaSecDescription`                                           | html(1000000)                            |          | yes       |          | Description                                                                      |
 
 `qa` external object definition
 -------------------------------

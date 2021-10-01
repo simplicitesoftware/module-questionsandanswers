@@ -13,7 +13,7 @@
 		"uri": "https://github.com/simplicitesoftware/module-qa.git"
 	}
 }]]></mdl_url>
-		<mdl_type/>
+		<mdl_lastupd>2020-02-28 22:04:47</mdl_lastupd>
 		<mdl_comment><![CDATA[[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-QuestionsAndAnswers&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-QuestionsAndAnswers)
 
 ### Introduction
@@ -81,6 +81,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<thm_color3>#E3BABA</thm_color3>
 		<thm_text3/>
 		<thm_base>light</thm_base>
+		<thm_css_doc>files/Theme/questionsandanswers/questionsandanswers_gen.css</thm_css_doc>
 		<thm_addon/>
 		<thm_searchbox/>
 		<thm_active/>
@@ -161,8 +162,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<usr_last_logon>2020-04-11 22:11:16</usr_last_logon>
 		<usr_dateformat/>
 		<usr_lang_pref>FRA</usr_lang_pref>
-		<usr_mfa_method/>
-		<usr_mfa_settings/>
 		<usr_uuid/>
 	</data>
 </object>
@@ -311,6 +310,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD1</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>10</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Keyword 1]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -318,6 +318,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD2</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>20</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Keyword 2]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -325,6 +326,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD3</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>30</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Keyword 3]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -332,6 +334,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD1</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>10</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Mot clé 1]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -339,6 +342,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD2</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>20</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Mot clé 2]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -346,6 +350,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<lov_code_id.lov_list_id.lov_name>QA_QAA_KEYWORDS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KEYWORD3</lov_code_id.lov_code>
+		<lov_code_id.lov_order_by>30</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Mot clé 3]]></lov_value>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
@@ -880,7 +885,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<obo_name>QAQuestionAndAnswer</obo_name>
 		<obo_dbtable>qa_questionandsanswer</obo_dbtable>
-		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -947,7 +951,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<obo_name>QAQuestionAndAnswerHistoric</obo_name>
 		<obo_dbtable>qa_questionandsanswer_hist</obo_dbtable>
-		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -1014,7 +1017,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<obo_name>QASection</obo_name>
 		<obo_dbtable>qa_section</obo_dbtable>
-		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -2144,6 +2146,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>qa</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/Disposition/default/qa.png</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
@@ -2161,6 +2164,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>qa-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/Disposition/default/qa-module.svg</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
@@ -2178,6 +2182,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>qa-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/Disposition/default/qa-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
@@ -2195,6 +2200,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>STYLES</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/qa/STYLES.less</res_file>
+		<res_file_compiled>resources/ObjectExternal/qa/STYLES.min.css</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
@@ -2212,7 +2218,26 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>HTML</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/qa/HTML.html</res_file>
+		<res_file_compiled/>
 		<res_image/>
+		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>qa</obe_name>
+				</data>
+			</object>
+		</res_object>
+		<res_type>ICO</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>FAVICON</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/ObjectExternal/qa/FAVICON.png</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2229,6 +2254,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>BANNER</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/ObjectExternal/qa/BANNER.jpg</res_image>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
@@ -2246,6 +2272,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<res_code>SCRIPT</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/qa/SCRIPT.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/qa/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>QuestionsAndAnswers</row_module_id.mdl_name>
 	</data>
